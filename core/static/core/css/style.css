@@ -1,0 +1,338 @@
+/* ===== Global ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: transparent;
+    
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* ===== Skills Grid ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== Skill Card ===== */
+.skill-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Skill Content ===== */
+.skill-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.skill-level {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== Projects Page ===== */
+
+.back-btn {
+    display: inline-block;
+    margin: 10px 0 30px 0;  /*top right button left */
+    padding: 10px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    color: #2575fc;
+    background: #eaf1ff;
+    border-radius: 8px;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.back-btn:hover {
+    background: #7a8aa7;
+    color: white;
+    transform: translateX(-4px);
+}
+
+
+
+.project-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Grid layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Project Card */
+.project-card {
+    background: linear-gradient(135deg, #72687c, #265fc2);
+    color: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+}
+
+/* Title */
+.project-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+/* Description */
+.project-card p {
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+/* GitHub button */
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: white;
+    color: #54688b;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.project-card a:hover {
+    background: #eaeaea;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 50px 0 10px;
+
+    /* Gradient text */
+    background: grey;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    position: relative;
+}
+
+/* Animated underline */
+.page-title::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 2px;
+
+    background: linear-gradient(90deg, #520209, #94a3bb);
+    animation: underline-slide 1.2s ease forwards;
+}
+
+/* Underline animation */
+@keyframes underline-slide {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 140px;
+        opacity: 1;
+    }
+}
+
+/* ===== Footer ===== */
+
+.footer {
+    background: transparent;
+    color: #c58c10;
+    text-align: center;
+    padding: 18px;
+    margin-top: 0%;
+    font-size: 14px;
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    width: 100%
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* ===== Home Section ===== */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #887d94, #2f508a);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+/* Title */
+.hero-title {
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Buttons container */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.hero-btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+/* Primary button */
+.hero-btn.primary {
+    background: white;
+    color: #2575fc;
+}
+
+.hero-btn.primary:hover {
+    background: #f1f1f1;
+    transform: translateY(-3px);
+}
+
+/* Secondary button */
+.hero-btn.secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.hero-btn.secondary:hover {
+    background: white;
+    color: #2575fc;
+    transform: translateY(-3px);
+}
+
+/* Home background  image */
+.hero {
+    padding-top: 75px;   /* pushes content below header */
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("/static/core/images/image1.jpeg");
+
+    background-size: cover ;  /* shows full screen */
+    background-position: center 25%;  /* image moved up*/
+    background-repeat: no-repeat;
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* Header overlay on hero image */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: transparent;
+    color: rgb(255, 255, 255);
+
+    padding: 20px 40px;
+    z-index: 10;
+}
+
+/* Navbar links */
+.header a {
+    color: rgb(10, 29, 202);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    opacity: 0.8;
+}
+
+/* logo image */
+.logo-img{
+    width: 46px;
+    height: 30px;          /* make it a perfect square */
+    border-radius: 50%;    /* ✅ makes it circular */
+    object-fit: cover;     /* keeps it fitting inside */
+    overflow: hidden;      /* hides corners */
+    display: block;
+}
+
+
+.logo a {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Hello, I'm Jeremy</h1>
+        <p class="hero-subtitle">
+            Python & Django Developer building modern web apps
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{% url 'projects' %}" class="hero-btn primary">
+                View Projects
+            </a>
+            <a href="{% url 'skills' %}" class="hero-btn secondary">
+                My Skills
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

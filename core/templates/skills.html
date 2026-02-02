@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Skills & Technologies{% endblock %}
+
+{% block content %}
+
+<h1>Skills and Technologies</h1>
+
+<a href="{% url 'home' %}" class="back-btn">← Back to Home</a>
+
+<div class="skills-grid">
+    {% for skill in skills %}
+        <div class="skill-card">
+            <div class="skill-icon">{{ skill.icon }}</div>
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level">{{ skill.level }}</div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

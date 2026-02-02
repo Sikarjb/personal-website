@@ -1,0 +1,46 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>{% block title %}Jeremiah{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="{% url  'home' %}">
+                <img src="{% static 'core/images/logo.png' %}" alt="logo" class="logo-img">
+            </a>
+        </div>
+
+        <p>
+            <nav class="nav">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'skills' %}">Skills</a>
+            </nav>
+        </p>
+
+    </header> 
+    <main>
+        {% block content %}{% endblock %}
+    </main>   
+
+    <footer class="footer">
+    <p>&copy; <span id="year"></span> Jeremy. Power of Python.</p> 
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+</body>
+</html>
